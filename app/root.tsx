@@ -10,6 +10,7 @@ import styles from './styles/app.css';
 import favicon from '../public/favicon.svg';
 import {Layout} from './components/Layout';
 import {LoaderArgs} from '@shopify/remix-oxygen';
+import {Seo} from '@shopify/hydrogen';
 
 export const links = () => {
   return [
@@ -44,6 +45,7 @@ export default function App() {
   return (
     <html lang="en">
       <head>
+        <Seo />
         <Meta />
         <Links />
       </head>

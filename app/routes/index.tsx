@@ -14,7 +14,7 @@ export async function loader({context}: LoaderArgs) {
 }
 
 export default function Index() {
-  const {collections} = useLoaderData();
+  const {collections} = useLoaderData<typeof loader>();
   return (
     <section className="w-full gap-4">
       <h2 className="whitespace-pre-wrap max-w-prose font-bold text-lead">
