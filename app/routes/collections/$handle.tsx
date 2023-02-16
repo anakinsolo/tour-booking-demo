@@ -1,7 +1,6 @@
-import { useLoaderData } from "@remix-run/react";
-import { json } from "@shopify/remix-oxygen";
-import ProductGrid from "../../components/ProductGrid";
-
+import {useLoaderData} from '@remix-run/react';
+import {json} from '@shopify/remix-oxygen';
+import ProductGrid from '../../components/ProductGrid';
 
 const seo = ({data}) => ({
   title: data?.collection?.title,
@@ -12,7 +11,7 @@ export const handle = {
   seo,
 };
 
-export async function loader({params,context}) {
+export async function loader({params, context}) {
   const {handle} = params;
   const {collection} = await context.storefront.query(COLLECTION_QUERY, {
     variables: {

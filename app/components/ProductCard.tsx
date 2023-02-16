@@ -14,10 +14,9 @@ export default function ProductCard({product}) {
               Sale
             </label>
           )}
-          <Image
-            data={product.variants.nodes[0].image}
-            alt={product.title}
-          />
+          {product.variants.nodes[0].image && (
+            <Image data={product.variants.nodes[0].image} alt={product.title} />
+          )}
         </div>
         <div className="grid gap-1">
           <h3 className="max-w-prose text-copy w-full overflow-hidden whitespace-nowrap text-ellipsis ">
